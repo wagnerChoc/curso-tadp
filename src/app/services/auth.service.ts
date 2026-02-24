@@ -10,9 +10,9 @@ export class AuthService {
   login(username: string, password: string): Observable<any> {
     
     if (username === 'admin' && password === '1234') {
-      return of({ success: true, token: 'fake-jwt-token' });
+      return of({ success: true });
     } else {
-      return of({ success: false, message: 'Credenciales incorrectas' });
+      return of({ success: false });
     }
   }
 }
