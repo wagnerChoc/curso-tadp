@@ -11,7 +11,11 @@ export class LoginComponent {
 
   login() {
     this.authService.login('admin', '1234')
-      .subscribe(res => console.log(res));
+      .subscribe(response => {
+        if (response.success) {
+          console.log('Login corecto');
+        }
+      });
   }
 
 }
